@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -29,9 +29,10 @@ const SetDestinationScreen = ({ route, navigation }) => {
 
   useEffect(() => {
     if (destination && locations[destination]) {
-      setMarker(locations[destination]);
+      const location = locations[destination];
+      setMarker(location);
       setRegion({
-        ...locations[destination],
+        ...location,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
       });
@@ -53,7 +54,12 @@ const SetDestinationScreen = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-      <MapView style={styles.map} region={region}>
+      <MapView
+        provider={PROVIDER_GOOGLE}
+        style={styles.map}
+        region={region}
+        onRegionChangeComplete={setRegion}
+      >
         {marker && <Marker coordinate={marker} />}
       </MapView>
 
