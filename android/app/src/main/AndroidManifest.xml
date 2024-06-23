@@ -21,5 +21,13 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+    <meta-data
+     android:name="com.google.android.geo.API_KEY"
+     android:value="AIzaSyBJ9eGNvfRw1jaTsmt9FUJYZb_fl4lDaSss"/>
     </application>
+ <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+   
 </manifest>

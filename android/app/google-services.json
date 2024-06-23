@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "428466149522",
+    "project_id": "start-fyp",
+    "storage_bucket": "start-fyp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428466149522:android:780616fe9dabcbf298ae4b",
+        "android_client_info": {
+          "package_name": "com.startfyp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ9eGNvfRw1jaTsmt9FUJYZb_fl4lDaSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
